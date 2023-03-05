@@ -20,7 +20,13 @@ test("check calculator operations", () => {
 });
 
 test("check caesar cipher", () => {
-  expect(caeserCipher("Abc65-/", 2)).toBe("Cde65-/");
+  expect(caeserCipher("Abc", 2)).toBe("Cde");
+});
+test("check caesar cipher numbers", () => {
+  expect(caeserCipher("1234", 2)).toBe("1234");
+});
+test("check caesar cipher other characters", () => {
+  expect(caeserCipher("-/", 2)).toBe("-/");
 });
 
 test("check analyze array", () => {
